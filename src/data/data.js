@@ -6,20 +6,20 @@ const data = [
   {
     id: 1,
     heading: "Heading number one",
-    img: { img1 },
-    text: "sdojaslkdjasldkasjdklasdjaskldjaskldjaskdljas d kasld jas dakls djasdlk jsadlka dlk j kl djklsdjaslkdasj k jd klsadjasfkdkbn s ",
+    img: img1,
+    text: "1111111111111111111111111 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sapiente at dignissimos dolore atque. Ab suscipit mollitia reprehenderit dignissimos voluptates tenetur, esse eos eaque saepe, consequatur in voluptate accusantium consequuntur. ",
   },
   {
     id: 2,
     heading: "Heading number one",
-    img: { img2 },
-    text: "sdojaslkdjasldkasjdklasdjaskldjaskldjaskdljas d kasld jas dakls djasdlk jsadlka dlk j kl djklsdjaslkdasj k jd klsadjasfkdkbn s ",
+    img: img2,
+    text: "2222222222 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sapiente at dignissimos dolore atque. Ab suscipit mollitia reprehenderit dignissimos voluptates tenetur, esse eos eaque saepe, consequatur in voluptate accusantium consequuntur.  ",
   },
   {
     id: 3,
     heading: "Heading number one",
-    img: { img3 },
-    text: "sdojaslkdjasldkasjdklasdjaskldjaskldjaskdljas d kasld jas dakls djasdlk jsadlka dlk j kl djklsdjaslkdasj k jd klsadjasfkdkbn s ",
+    img: img3,
+    text: "333333333333333 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sapiente at dignissimos dolore atque. Ab suscipit mollitia reprehenderit dignissimos voluptates tenetur, esse eos eaque saepe, consequatur in voluptate accusantium consequuntur.  ",
   },
 ];
 
