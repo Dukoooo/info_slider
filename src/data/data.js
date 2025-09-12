@@ -5,21 +5,21 @@ import img3 from "../assets/img03.jpg";
 const data = [
   {
     id: 1,
-    heading: "Heading number one",
+    heading: "Morning Cappuccino",
     img: img1,
-    text: "1111111111111111111111111 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sapiente at dignissimos dolore atque. Ab suscipit mollitia reprehenderit dignissimos voluptates tenetur, esse eos eaque saepe, consequatur in voluptate accusantium consequuntur. ",
+    text: "A warm cup of cappuccino to start the day right. Smooth foam, rich aroma, and a moment just for yourself.",
   },
   {
     id: 2,
-    heading: "Heading number one",
+    heading: "Ready for Takeoff",
     img: img2,
-    text: "2222222222 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sapiente at dignissimos dolore atque. Ab suscipit mollitia reprehenderit dignissimos voluptates tenetur, esse eos eaque saepe, consequatur in voluptate accusantium consequuntur.  ",
+    text: "The feeling of freedom when the plane leaves the ground. Adventure, new destinations, and endless possibilities ahead.",
   },
   {
     id: 3,
-    heading: "Heading number one",
+    heading: "Snowboarding Vibes",
     img: img3,
-    text: "333333333333333 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sapiente at dignissimos dolore atque. Ab suscipit mollitia reprehenderit dignissimos voluptates tenetur, esse eos eaque saepe, consequatur in voluptate accusantium consequuntur.  ",
+    text: "Fresh snow, cold air, and pure adrenaline on the slopes. Nothing beats the rush of carving down the mountain.",
   },
 ];
 
