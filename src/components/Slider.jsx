@@ -62,7 +62,6 @@ function Slider({ data }) {
                 className="rounded-t-2xl "
               />
             </div>
-
             <div className="rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
               <h3>{data[prevIndex].heading} </h3>
               <p>{data[prevIndex].text}</p>
