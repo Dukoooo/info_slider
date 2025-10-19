@@ -1,7 +1,9 @@
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
+import { FaQuoteRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import Quoat from "./Quoat";
 
 function Slider({ data }) {
   //   const { id, heading, img, text } = data;
@@ -49,7 +51,7 @@ function Slider({ data }) {
           <button>
             {" "}
             <GrPrevious
-              className="text-amber-50 relative right-[150px]"
+              className="text-amber-50 relative right-[150px] cursor-pointer"
               onClick={() => handlePrevious()}
             />
           </button>
@@ -76,9 +78,12 @@ function Slider({ data }) {
               />
             </div>
 
-            <div className="rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
-              <h3 className=" text-center">{data[activeIndex].heading} </h3>
-              <p>{data[activeIndex].text}</p>
+            <div className="relative rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
+              <div className=" w-[70%]">
+                <Quoat />
+                <h3 className=" text-left">{data[activeIndex].heading} </h3>
+                <p className="text-left">{data[activeIndex].text}</p>
+              </div>
             </div>
           </div>
 
@@ -96,7 +101,7 @@ function Slider({ data }) {
               <p>{data[nextIndex].text}</p>
             </div>
           </div>
-          <button className="text-amber-50 relative left-[150px] ">
+          <button className="text-amber-50 relative left-[150px] cursor-pointer">
             <GrNext className="" onClick={() => handleNext()} />
           </button>
         </div>
