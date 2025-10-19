@@ -114,7 +114,7 @@ function Slider({ data }) {
             exit={{ opacity: 0, x: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
-            <div className="flex justify-center  items-center h-screen w-[80%] mx-auto relative text-left ">
+            <div className="flex justify-center  items-center h-screen w-[330px] mx-auto relative text-left ">
               <div className="flex flex-col justify-center  items-center bg-amber-50 w-[100%] h-[350px] rounded-3xl mx-4 z-10 transform scale-110    ">
                 <div className="h-1/2">
                   <img
