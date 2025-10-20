@@ -46,17 +46,17 @@ function Slider({ data }) {
 
   return (
     <>
-      {windowWidth >= 768 ? (
+      {windowWidth >= 900 ? (
         <div className="flex justify-center  items-center h-screen w-[90%] mx-auto relative  text-center ">
           <button>
             {" "}
             <GrPrevious
-              className="text-amber-50 relative right-[150px] cursor-pointer"
+              className="text-amber-50 relative right-[250px] cursor-pointer"
               onClick={() => handlePrevious()}
             />
           </button>
 
-          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[60%] md:translate-x-[30%] overflow-hidden">
+          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[60%] md:translate-x-[70%] overflow-hidden">
             <div className="h-1/2">
               <img
                 src={data[prevIndex].img}
@@ -69,7 +69,7 @@ function Slider({ data }) {
               <p>{data[prevIndex].text}</p>
             </div>
           </div>
-          <div className="flex flex-col justify-center  items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-10 transform scale-110">
+          <div className="flex flex-col justify-center  items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-10 transform scale-120">
             <div className="h-1/2 w-full">
               <img
                 src={data[activeIndex].img}
@@ -87,7 +87,66 @@ function Slider({ data }) {
             </div>
           </div>
 
-          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[-70%]  md:translate-x-[-30%]  overflow-hidden">
+          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[-70%]  md:translate-x-[-70%]  overflow-hidden">
+            <div className="h-1/2">
+              <img
+                src={data[nextIndex].img}
+                alt=""
+                className="rounded-t-2xl "
+              />
+            </div>
+
+            <div className="rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
+              <h3>{data[nextIndex].heading} </h3>
+              <p>{data[nextIndex].text}</p>
+            </div>
+          </div>
+          <button className="text-amber-50 relative left-[250px] cursor-pointer">
+            <GrNext className="" onClick={() => handleNext()} />
+          </button>
+        </div>
+      ) : windowWidth >= 760 ? (
+        <div className="flex justify-center  items-center h-screen w-[90%] mx-auto relative  text-center ">
+          <button>
+            {" "}
+            <GrPrevious
+              className="text-amber-50 relative right-[150px] cursor-pointer"
+              onClick={() => handlePrevious()}
+            />
+          </button>
+
+          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[60%] md:translate-x-[40%] overflow-hidden">
+            <div className="h-1/2">
+              <img
+                src={data[prevIndex].img}
+                alt=""
+                className="rounded-t-2xl "
+              />
+            </div>
+            <div className="rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
+              <h3>{data[prevIndex].heading} </h3>
+              <p>{data[prevIndex].text}</p>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center  items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-10 transform scale-120">
+            <div className="h-1/2 w-full">
+              <img
+                src={data[activeIndex].img}
+                alt=""
+                className="rounded-t-2xl h-[100%] w-[100%] "
+              />
+            </div>
+
+            <div className="relative rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
+              <div className=" w-[70%]">
+                <Quoat />
+                <h3 className=" text-left">{data[activeIndex].heading} </h3>
+                <p className="text-left">{data[activeIndex].text}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[-70%]  md:translate-x-[-40%]  overflow-hidden">
             <div className="h-1/2">
               <img
                 src={data[nextIndex].img}
@@ -114,7 +173,7 @@ function Slider({ data }) {
             exit={{ opacity: 0, x: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
-            <div className="flex justify-center  items-center h-screen w-[330px] mx-auto relative text-left ">
+            <div className="flex justify-center  items-center h-screen w-[300px] mx-auto relative text-left ">
               <div className="flex flex-col justify-center  items-center bg-amber-50 w-[100%] h-[350px] rounded-3xl mx-4 z-10 transform scale-110    ">
                 <div className="h-1/2">
                   <img
