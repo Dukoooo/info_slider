@@ -1,12 +1,29 @@
-# React + Vite
+# React Cards Slider
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and responsive **React + Tailwind CSS** project featuring an animated **image slider** with smooth transitions, keyboard navigation, and interactive card effects.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🖱️ **Interactive Cards** – buttons with a short pulse effect on hover or click
+- 🎞️ **Animated Slider** – smooth transitions using [Framer Motion](https://www.framer.com/motion/)
+- ⌨️ **Keyboard Navigation** – use `←` and `→` keys to move between slides
+- 📱 **Responsive Design** – adapts to desktop, tablet, and mobile layouts
+- 🎨 **Custom Components** – clean, reusable components:
+  - `CardBtn` – animated button
+  - `Quote` – quote icon badge
+  - `Slider` – main logic and layout
 
-## Expanding the ESLint configuration
+🛠️ Built with
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18+**
+- **Tailwind CSS**
+- **Framer Motion**
+- **React Icons**
+- **Vite**
+- **@fontsource/roboto-mono**
+
+👤 Author
+
+Created with ❤️ by Juraj Duko Golian.  
+Check out more projects on [GitHub](https://github.com/Dukoooo)
+or connect on [LinkedIn](https://www.linkedin.com/in/juraj-golian-884939220).

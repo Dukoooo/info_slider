@@ -1,14 +1,12 @@
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
-import { FaQuoteRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import Quoat from "./Quoat";
+import Quote from "./Quote";
+import CardBtn from "./CardBtn";
 
 function Slider({ data }) {
-  //   const { id, heading, img, text } = data;
   const [activeIndex, setActivIndex] = useState(0);
-  //   const prevIndex = (activeIndex - 1 + data.length) % data.length;
   const prevIndex = activeIndex === 0 ? data.length - 1 : activeIndex - 1;
   const nextIndex = activeIndex === data.length - 1 ? 0 : activeIndex + 1;
 
@@ -51,12 +49,12 @@ function Slider({ data }) {
           <button>
             {" "}
             <GrPrevious
-              className="text-amber-50 relative right-[250px] cursor-pointer"
+              className="text-amber-50 relative right-[250px]  cursor-pointer scale-175"
               onClick={() => handlePrevious()}
             />
           </button>
 
-          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[60%] md:translate-x-[70%] overflow-hidden">
+          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[60%] md:translate-x-[70%] overflow-hidden opacity-80">
             <div className="h-1/2">
               <img
                 src={data[prevIndex].img}
@@ -64,12 +62,16 @@ function Slider({ data }) {
                 className="rounded-t-2xl "
               />
             </div>
-            <div className="rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
-              <h3>{data[prevIndex].heading} </h3>
-              <p>{data[prevIndex].text}</p>
+            <div className="relative rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
+              <div className="text-left w-[80%]">
+                <Quote top={-3} />
+                <h3>{data[prevIndex].heading} </h3>
+                <p>{data[prevIndex].text}</p>
+              </div>
+              <CardBtn children={"Read more"} />
             </div>
           </div>
-          <div className="flex flex-col justify-center  items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-10 transform scale-120">
+          <div className="flex flex-col justify-center  items-center bg-amber-50 w-[350px] h-[380px] rounded-3xl mx-4 z-10 transform scale-120">
             <div className="h-1/2 w-full">
               <img
                 src={data[activeIndex].img}
@@ -80,14 +82,15 @@ function Slider({ data }) {
 
             <div className="relative rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
               <div className=" w-[70%]">
-                <Quoat />
+                <Quote />
                 <h3 className=" text-left">{data[activeIndex].heading} </h3>
                 <p className="text-left">{data[activeIndex].text}</p>
               </div>
+              <CardBtn children={"Read more"} />
             </div>
           </div>
 
-          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[-70%]  md:translate-x-[-70%]  overflow-hidden">
+          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[-70%]  md:translate-x-[-70%]  overflow-hidden opacity-80">
             <div className="h-1/2">
               <img
                 src={data[nextIndex].img}
@@ -96,12 +99,16 @@ function Slider({ data }) {
               />
             </div>
 
-            <div className="rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
-              <h3>{data[nextIndex].heading} </h3>
-              <p>{data[nextIndex].text}</p>
+            <div className="relative rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
+              <div className="text-left w-[80%]">
+                <Quote top={-3} />
+                <h3>{data[nextIndex].heading} </h3>
+                <p>{data[nextIndex].text}</p>
+              </div>
+              <CardBtn children={"Read more"} />
             </div>
           </div>
-          <button className="text-amber-50 relative left-[250px] cursor-pointer">
+          <button className="text-amber-50 relative left-[250px] cursor-pointer scale-175 ">
             <GrNext className="" onClick={() => handleNext()} />
           </button>
         </div>
@@ -110,12 +117,12 @@ function Slider({ data }) {
           <button>
             {" "}
             <GrPrevious
-              className="text-amber-50 relative right-[150px] cursor-pointer"
+              className="text-amber-50 relative right-[150px] cursor-pointer scale-175"
               onClick={() => handlePrevious()}
             />
           </button>
 
-          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[60%] md:translate-x-[40%] overflow-hidden">
+          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[60%] md:translate-x-[42%] overflow-hidden opacity-80">
             <div className="h-1/2">
               <img
                 src={data[prevIndex].img}
@@ -123,12 +130,16 @@ function Slider({ data }) {
                 className="rounded-t-2xl "
               />
             </div>
-            <div className="rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
-              <h3>{data[prevIndex].heading} </h3>
-              <p>{data[prevIndex].text}</p>
+            <div className="relative rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
+              <div className="w-[70%] text-left">
+                <Quote top={-3} />
+                <h3>{data[prevIndex].heading} </h3>
+                <p>{data[prevIndex].text}</p>
+              </div>
+              <CardBtn children={"Read more"} />
             </div>
           </div>
-          <div className="flex flex-col justify-center  items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-10 transform scale-120">
+          <div className="flex  flex-col justify-center items-center bg-amber-50 w-[330px] h-[400px] rounded-3xl mx-4 z-10 transform scale-120">
             <div className="h-1/2 w-full">
               <img
                 src={data[activeIndex].img}
@@ -138,15 +149,16 @@ function Slider({ data }) {
             </div>
 
             <div className="relative rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
-              <div className=" w-[70%]">
-                <Quoat />
-                <h3 className=" text-left">{data[activeIndex].heading} </h3>
-                <p className="text-left">{data[activeIndex].text}</p>
+              <div className=" w-[80%] text-left">
+                <Quote top={-1} />
+                <h3 className=" ">{data[activeIndex].heading} </h3>
+                <p className="">{data[activeIndex].text}</p>
               </div>
+              <CardBtn children={"Read more"} />
             </div>
           </div>
 
-          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[-70%]  md:translate-x-[-40%]  overflow-hidden">
+          <div className="flex flex-col absolute justify-center items-center bg-amber-50 w-[300px] h-[400px] rounded-3xl mx-4 z-0 transform translate-x-[-70%]  md:translate-x-[-42%]  overflow-hidden opacity-80">
             <div className="h-1/2">
               <img
                 src={data[nextIndex].img}
@@ -155,12 +167,16 @@ function Slider({ data }) {
               />
             </div>
 
-            <div className="rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
-              <h3>{data[nextIndex].heading} </h3>
-              <p>{data[nextIndex].text}</p>
+            <div className="relative rounded-b-2xl bg-amber-50 h-1/2 flex flex-col p-4  ">
+              <div className="w-[70%] text-left">
+                <Quote top={-3} />
+                <h3>{data[nextIndex].heading} </h3>
+                <p>{data[nextIndex].text}</p>
+              </div>
+              <CardBtn children={"Read more"} />
             </div>
           </div>
-          <button className="text-amber-50 relative left-[150px] cursor-pointer">
+          <button className="text-amber-50 relative left-[150px] cursor-pointer scale-175">
             <GrNext className="" onClick={() => handleNext()} />
           </button>
         </div>
@@ -183,13 +199,17 @@ function Slider({ data }) {
                   />
                 </div>
 
-                <div className="rounded-b-2xl bg-amber-50  flex-1 flex flex-col  p-1 pt-4  h-1/2 ">
-                  <h3 className="pl-10">{data[activeIndex].heading} </h3>
+                <div className=" relative  rounded-b-2xl bg-amber-50  flex-1 flex flex-col  pt-4  h-1/2 ">
+                  <Quote />
+                  <div className="relative left-[-1em] flex flex-col text-left ">
+                    <h3 className="pl-10">{data[activeIndex].heading} </h3>
 
-                  <p className="w-[70%]  mx-auto text-[0.7rem] ">
-                    {data[activeIndex].text}{" "}
-                  </p>
+                    <p className="w-[70%]  mx-auto text-[0.7rem] ">
+                      {data[activeIndex].text}{" "}
+                    </p>
+                  </div>
                 </div>
+                <CardBtn children={"Read more"} marginTop={1} />
               </div>
             </div>
           </motion.div>
